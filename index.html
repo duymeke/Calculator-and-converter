@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Endterm</title>
+</head>
+<body>
+
+    <h1>Калькулятор и Конвертер</h1>
+    
+    <div class="tabs">
+        <button id="calculator-tab">Калькулятор</button>
+        <button id="converter-tab">Конвертер</button>
+    </div>
+
+    <div class="section" id="calculator-section">
+        <h2>Калькулятор</h2>
+        <input type="number" id="num1" placeholder="Число 1">
+        <input type="number" id="num2" placeholder="Число 2">
+
+        <div class="operations">
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('*')">*</button>
+            <button onclick="calculate('/')">/</button>
+        </div>
+    <p> Результат: <span id="calc-result">0</span> </p>
+    </div>
+
+    <div id="converter-section" class="section hidden">
+        <h2>Конвертер</h2>
+        <select id="conversion-type">
+            <option value="temp">Температура</option>
+            <option value="distance">Расстояние</option>
+        </select>
+        <input type="number" id="input-value" placeholder="Введите значение">
+        <button onclick="convert()">Конвертировать</button>
+        <p>Результат: <span id="conv-result">0</span></p>
+    </div>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
